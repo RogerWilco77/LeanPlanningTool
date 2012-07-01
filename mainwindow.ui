@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>955</width>
-    <height>662</height>
+    <width>693</width>
+    <height>395</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,7 +44,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QSpinBox" name="spinBox"/>
+        <widget class="QSpinBox" name="spbxDemandPerYear"/>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_4">
@@ -54,7 +54,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QSpinBox" name="spinBox_2"/>
+        <widget class="QSpinBox" name="spbxWorkDaysPerYear"/>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_3">
@@ -64,7 +64,7 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+        <widget class="QDoubleSpinBox" name="spbxWorkHoursPerDay"/>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_5">
@@ -74,12 +74,12 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        <widget class="QDoubleSpinBox" name="spbxOee"/>
        </item>
        <item row="6" column="0">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="btnCalculate">
          <property name="text">
-          <string>PushButton</string>
+          <string>calculate basic metrics</string>
          </property>
         </widget>
        </item>
@@ -92,7 +92,7 @@
      <rect>
       <x>430</x>
       <y>40</y>
-      <width>196</width>
+      <width>220</width>
       <height>102</height>
      </rect>
     </property>
@@ -108,7 +108,7 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLCDNumber" name="lcdNumber_2"/>
+      <widget class="QLCDNumber" name="lcdTaktTime"/>
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="label_9">
@@ -118,7 +118,7 @@
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLCDNumber" name="lcdNumber_3"/>
+      <widget class="QLCDNumber" name="lcdCycleTime"/>
      </item>
      <item row="2" column="1">
       <widget class="QLCDNumber" name="lcdNumber"/>
@@ -133,7 +133,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>calculated project data</string>
+        <string>calculated project metrices</string>
        </property>
       </widget>
      </item>
@@ -145,7 +145,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>955</width>
+     <width>693</width>
      <height>21</height>
     </rect>
    </property>
