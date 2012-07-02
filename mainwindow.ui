@@ -44,7 +44,17 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QSpinBox" name="spbxDemandPerYear"/>
+        <widget class="QSpinBox" name="spbxDemandPerYear">
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="singleStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>200</number>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_4">
@@ -54,7 +64,14 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QSpinBox" name="spbxWorkDaysPerYear"/>
+        <widget class="QSpinBox" name="spbxWorkDaysPerYear">
+         <property name="maximum">
+          <number>365</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_3">
@@ -64,7 +81,17 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="spbxWorkHoursPerDay"/>
+        <widget class="QDoubleSpinBox" name="spbxWorkHoursPerDay">
+         <property name="maximum">
+          <double>24.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="value">
+          <double>21.000000000000000</double>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_5">
@@ -74,7 +101,17 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="spbxOee"/>
+        <widget class="QDoubleSpinBox" name="spbxOee">
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.850000000000000</double>
+         </property>
+        </widget>
        </item>
        <item row="6" column="0">
         <widget class="QPushButton" name="btnCalculate">

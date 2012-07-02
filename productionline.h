@@ -25,7 +25,7 @@ public:
       */
 
 
-    ProductionLine(int demand, int workDays, double workHours, double oeeValue);
+    ProductionLine(double demand, double workDays, double workHours, double oeeValue);
 
     double getCycleTime();      /*! returns cycle time in seconds */
     double getTaktTime();       /*! returns takt time in seconds */
@@ -33,15 +33,15 @@ public:
 
 
 private:
-    int demandPerYear;          /*! < customer demand of pieces per year */
-    int workDaysPerYear;        /*! < work days per year considering bank holidays, shut downs, ... */
+    double demandPerYear;          /*! < customer demand of pieces per year */
+    double workDaysPerYear;        /*! < work days per year considering bank holidays, shut downs, ... */
     double workHoursPerDay;    /*! < planned work hours. Work hours - pause - planned maintenance...*/
     double oee;                 /*! < estimated OEE (Overall Equipment Effectiveness)*/
     double cycleTime;           /*! cycle time of production line */
     double taktTime;            /*! takt time of production line */
-    int unitsPerDay;            /*! units per day required */
+    double unitsPerDay;            /*! units per day required */
 
-    int calculateUnitsPerDay();     /*! > calculate the demand in units per day */
+    double calculateUnitsPerDay();     /*! > calculate the demand in units per day */
     double calculateTaktTime();     /*! > calculate the takt time to cover units per day in seconds*/
     double calculateCycleTime();    /*! > calculate the cycle time to fulfill takt considering OEE  in seconds*/
 

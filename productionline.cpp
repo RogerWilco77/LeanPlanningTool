@@ -5,22 +5,23 @@ ProductionLine::ProductionLine()
 }
 
 
-ProductionLine::ProductionLine(int demand, int workDays, double workHours, double oeeValue) {
+ProductionLine::ProductionLine(double demand, double workDays, double workHours, double oeeValue) {
     demandPerYear = demand;
     workDaysPerYear = workDays;
     workHoursPerDay = workHours;
     oee = oeeValue;
 
 
-    //
-    // missing initialisation of remaining variables for calculation!!!
-    //
+
+    unitsPerDay = calculateUnitsPerDay(); //weakness: the order is mandatory because unitsPerDay is required for TaktTime
+    taktTime = calculateTaktTime();
+    cycleTime = calculateCycleTime();
 
 }
 
 
 
-int ProductionLine::calculateUnitsPerDay() {
+double ProductionLine::calculateUnitsPerDay() {
     return demandPerYear/workDaysPerYear;
 
 }
@@ -31,5 +32,18 @@ double ProductionLine::calculateTaktTime() {
 }
 
 double ProductionLine::calculateCycleTime() {
-    return taktTime/oee;
+    return taktTime*oee;
+}
+
+
+double ProductionLine::getUnitsPerDay() {
+    return unitsPerDay;
+}
+
+double ProductionLine::getTaktTime() {
+    return taktTime;
+}
+
+double ProductionLine::getCycleTime() {
+    return cycleTime;
 }

@@ -25,8 +25,8 @@ MainWindow::~MainWindow()
 void MainWindow::calculateMetrics() {
 
 
-    int demand = ui->spbxDemandPerYear->value();
-    int workdays = ui->spbxWorkDaysPerYear->value();
+    double demand = 1000.0*ui->spbxDemandPerYear->value();
+    double workdays = 1.0*ui->spbxWorkDaysPerYear->value();
     double workhours = ui->spbxWorkHoursPerDay->value();
     double oee = ui->spbxOee->value();
 
@@ -34,5 +34,9 @@ void MainWindow::calculateMetrics() {
     ProductionLine *production;
 
     production = new ProductionLine(demand, workdays, workhours, oee);
+
+    ui->lcdNumber->display(production->getUnitsPerDay());
+    ui->lcdTaktTime->display(production->getTaktTime());
+    ui->lcdCycleTime->display(production->getCycleTime());
 
 }
