@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += xml
 
 TARGET = LeanPlanningTool
 TEMPLATE = app
@@ -12,9 +13,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    productionline.cpp
+    productionline.cpp \
+    domparser.cpp
 
 HEADERS  += mainwindow.h \
-    productionline.h
+    productionline.h \
+    domparser.h
 
 FORMS    += mainwindow.ui
