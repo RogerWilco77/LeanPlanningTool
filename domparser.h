@@ -2,6 +2,8 @@
 #define DOMPARSER_H
 
 #include <QtXml>
+#include <QTreeWidget>
+#include <iostream>
 
 
 class DomParser
@@ -15,6 +17,10 @@ private:
     void parseLineDefinitionElement(const QDomElement &element);
     void parseDemandPerYearElement(const QDomElement &element, QTreeWidgetItem *parent);
     void parseWorkdaysPerYearElement (const QDomElement &element, QTreeWidgetItem *parent);
+
+    QTreeWidget *treeWidget;
+
+
 
 
 };

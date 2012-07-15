@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <productionline.h>
+#include <domparser.h>
 
 
 // just a comment for test

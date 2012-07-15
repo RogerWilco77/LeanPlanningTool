@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -38,5 +40,10 @@ void MainWindow::calculateMetrics() {
     ui->lcdNumber->display(production->getUnitsPerDay());
     ui->lcdTaktTime->display(production->getTaktTime());
     ui->lcdCycleTime->display(production->getCycleTime());
+
+
+    DomParser parser(ui->treeWidget);
+    parser.readFile("/home/axel/programmierung/LeanPlanningTool/xml/LineData");
+
 
 }
